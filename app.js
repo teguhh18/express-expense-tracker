@@ -28,6 +28,12 @@ require("./models/user.model");
 require("./models/transactions.model");
 
 // ROUTE
+app.get("/test", (req, res) => {
+  res.json({
+    status: "success",
+    message: "Test route is working"
+  });
+});
 app.use("/api/users", userRoutes);
 app.use("/api/transactions", transactionsRoutes);
 // END ROUTE
